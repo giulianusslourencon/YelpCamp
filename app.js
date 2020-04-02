@@ -13,7 +13,7 @@ var commentRoutes   = require("./routes/comments"),
 campgroundRoutes    = require("./routes/campgrounds"),
 indexRoutes         = require("./routes/index");
 
-mongoose.connect(process.env.YCDATABASEURL, {
+mongoose.connect(process.env.YCDATABASEURL || "mongodb://localhost/yelp_camp", {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,

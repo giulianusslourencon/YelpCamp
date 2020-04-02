@@ -10,7 +10,8 @@ router.get("/", function (req, res) {
             console.log(err);
         else
             res.render("campgrounds/index", {
-                campgrounds: campgrounds
+                campgrounds: campgrounds,
+                page: "campgrounds"
             });
     });
 });
